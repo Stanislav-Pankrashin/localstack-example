@@ -1,3 +1,1 @@
 # localstack-example
-
-test
