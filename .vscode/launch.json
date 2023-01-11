@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "address": "127.0.0.1",
+            "address": "0.0.0.0",
             "localRoot": "${workspaceFolder}",
             "name": "Attach to Remote Node.js",
             "port": 9229,

@@ -4,6 +4,7 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import * as lambdaNodeJS from "aws-cdk-lib/aws-lambda-nodejs";
 import * as apigateway from "aws-cdk-lib/aws-apigateway";
 import * as path from "path";
+import { Duration } from "aws-cdk-lib";
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class SrcStack extends cdk.Stack {
@@ -20,6 +21,7 @@ export class SrcStack extends cdk.Stack {
             runtime: lambda.Runtime.NODEJS_16_X,
             entry: path.join(__dirname, "/../resources/main.ts"),
             handler: "main",
+            timeout: Duration.seconds(60),
         });
 
         const api = new apigateway.RestApi(this, "handler-api", {
