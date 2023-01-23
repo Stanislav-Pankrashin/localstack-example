@@ -5,7 +5,7 @@
             "address": "0.0.0.0",
             "localRoot": "${workspaceFolder}",
             "name": "Attach to Remote Node.js",
-            "port": 9229,
+            "port": 9230,
             "remoteRoot": "/var/task/",
             "request": "attach",
             "type": "node",
