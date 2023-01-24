@@ -4,7 +4,7 @@ import DynamoDB = require('aws-sdk/clients/dynamodb');
 import { AuditTable } from './models/Audit.dynamo';
 
 export const main = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResult> => {
-    console.log("will you see this???");
+    console.log("Running hello world lambda");
     const body = {result: "Hello World!!!"};
 
     const client = new DynamoDB({region: 'us-west-2', endpoint: `http://${process.env.LOCALSTACK_HOSTNAME}:4566'`});

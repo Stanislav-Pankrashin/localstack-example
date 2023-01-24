@@ -61,10 +61,12 @@ export class SrcStack extends cdk.Stack {
             entry: path.join(__dirname, "/../resources/sqsConsumerLambda.ts"),
             handler: "main",
             timeout: Duration.seconds(60),
+            environment: {
+                NODE_OPTIONS: "--inspect-brk=0.0.0.0:9229"
+            }
         });
 
         // SQS
-
         const queue = new sqs.Queue(this, 'ProducerConsumerSQS', {
             queueName: 'ProducerConsumerSQS',
         });

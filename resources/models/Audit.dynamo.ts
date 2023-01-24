@@ -11,4 +11,7 @@ export class AuditTable {
 
     @attribute()
     public action!: string;
+
+    @attribute()
+    public message?: string;
 }

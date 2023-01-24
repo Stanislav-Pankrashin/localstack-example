@@ -4,7 +4,7 @@
         {
           "label": "Wait Remote Debugger Server",
           "type": "shell",
-          "command": "while [[ -z $(docker ps | grep :9230) ]]; do sleep 1; done; sleep 1;"
+          "command": "while [[ -z $(docker ps | grep :9229) ]]; do sleep 1; done; sleep 1;"
         }
     ]
 }
