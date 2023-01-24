@@ -12,7 +12,6 @@ services:
       - LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR-}
       - DOCKER_HOST=unix:///var/run/docker.sock
       - LAMBDA_REMOTE_DOCKER=0
-      - LAMBDA_DOCKER_FLAGS=-e NODE_OPTIONS=--inspect-brk=0.0.0.0:9230 -p 9230:9230
     volumes:
       - "${LOCALSTACK_VOLUME_DIR:-./.volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"

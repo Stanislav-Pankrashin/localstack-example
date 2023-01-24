@@ -7,7 +7,7 @@ export const main = async (event: APIGatewayProxyEventV2): Promise<APIGatewayPro
     console.log("will you see this???");
     const body = {result: "Hello World!!!"};
 
-    const client = new DynamoDB({region: 'us-west-2', endpoint: `http://${process.env.LOCALSTACK_HOSTNAME}:4566'}`});
+    const client = new DynamoDB({region: 'us-west-2', endpoint: `http://${process.env.LOCALSTACK_HOSTNAME}:4566'`});
     const mapper = new DataMapper({client});
 
     const record = new AuditTable();

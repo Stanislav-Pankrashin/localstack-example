@@ -24,6 +24,7 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-sdk/client-sqs": "^3.256.0",
     "@aws/dynamodb-data-mapper": "^0.7.3",
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
     "aws-cdk-lib": "2.45.0",
